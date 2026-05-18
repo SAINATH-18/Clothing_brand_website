@@ -73,7 +73,9 @@ export default function LuxeAtelier() {
 
   // ── cursor tracking ──────────────────────────────────────────────────────
   useEffect(() => {
+
     const move = (e:MouseEvent) => setCursorPos({ x: e.clientX, y: e.clientY })
+
     window.addEventListener("mousemove", move)
     return () => window.removeEventListener("mousemove", move)
   }, [])
